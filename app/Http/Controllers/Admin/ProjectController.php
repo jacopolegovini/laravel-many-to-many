@@ -61,7 +61,9 @@ class ProjectController extends Controller
     {
         $projects = Project::findOrFail($id);
         $types = Type::all();
-        return view('admin.projects.edit', compact('projects', 'types'));
+        $technologies = Technology::all();
+
+        return view('admin.projects.edit', compact('projects', 'types', 'technologies'));
     }
 
     /**
@@ -71,6 +73,7 @@ class ProjectController extends Controller
     {
         $projects = Project::findOrFail($id);
         $projects->update($request->validated());
+
         return redirect()->route('admin.projects.index');
     }
 

@@ -15,7 +15,7 @@
         @csrf
         @method('PUT')
             <h1 class="mb-3">
-                Creating a new Project:
+                Edit the {{$projects->title}} Project:
             </h1>
             <div class="mb-3">
                 {{-- Implementato una validazione manuale per cancellare la risposta sbagliata e lasciare esclusivamente quelle corrette --}}
@@ -43,6 +43,14 @@
                 <label for="project-description" class="form-label">Description:</label>
                 <input type="text" class="form-control" id="project-description" name="description" value="{{$projects->description}}">
             </div>
+            {{-- ! Da aggiustare --}}
+            {{-- <div class="mb-3">
+                <label for="project-technology" class="form-label">Technology:</label><br>
+                @foreach ($technologies as $technology)
+                    <input type="checkbox" class="" id="project-technology-{{$technology->name}}" name="technologies[]" value="{{$technology->id}}">
+                    <label for="project-technology" class="btn-group">{{$technology->name}}</label><br>
+                @endforeach
+            </div> --}}
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
                 <button type="submit" class="btn btn-primary me-3">
