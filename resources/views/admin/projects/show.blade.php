@@ -15,9 +15,9 @@
                 </li>
                 @endforeach
             </ul>
+
             <a href="{{route('welcome.index')}}" class="card-link">Go Back</a>
         </div>
     </div>
 </div>
-
 @endsection

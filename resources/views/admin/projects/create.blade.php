@@ -24,7 +24,7 @@
             </div>
             <div class="mb-3">
                 <label for="project-type" class="form-label">Type:</label>
-                <select class="form-control" id="type_id" name="type_id" value="{{old('type')}}">
+                <select class="form-control" id="type_id" name="type_id">
                     <option value=""></option>
                     @foreach ($types as $type)
                     <option value="{{$type->id}}">{{$type->type}}</option>
@@ -42,6 +42,13 @@
             <div class="mb-3">
                 <label for="project-description" class="form-label">Description:</label>
                 <input type="text" class="form-control" id="project-description" name="description" value="{{old('description')}}">
+            </div>
+            <div class="mb-3">
+                <label for="project-technology" class="form-label">Technology:</label><br>
+                @foreach ($technologies as $technology)
+                    <input type="checkbox" class="" id="project-technology-{{$technology->name}}" name="technologies[]" value="{{$technology->id}}">
+                    <label for="project-technology" class="btn-group">{{$technology->name}}</label><br>
+                @endforeach
             </div>
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
