@@ -8,6 +8,11 @@
             <h5 class="card-title">{{$projects->title}} | {{$projects->type->type}}</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">{{$projects->date}}</h6>
             <p class="card-text">{{$projects->description}}</p>
+            <ul>
+                @foreach ( as )
+
+                @endforeach
+            </ul>
             <a href="{{route('welcome.index')}}" class="card-link">Go Back</a>
         </div>
     </div>
