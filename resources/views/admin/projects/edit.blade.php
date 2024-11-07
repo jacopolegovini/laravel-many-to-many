@@ -23,6 +23,15 @@
                 <input type="text" class="form-control" id="project-title" name="title" value="{{$projects->title}}">
             </div>
             <div class="mb-3">
+                <label for="project-type" class="form-label">Type:</label>
+                <select class="form-control" id="type_id" name="type_id">
+                    <option value="">{{$projects->type->type}}</option>
+                    @foreach ($types as $type)
+                    <option value="{{$type->id}}">{{$type->type}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="project-author" class="form-label">Author:</label>
                 <input type="text" class="form-control" id="author" name="author" value="{{$projects->author}}">
             </div>
