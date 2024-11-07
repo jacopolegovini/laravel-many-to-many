@@ -26,7 +26,8 @@ class StoreProjectRequest extends FormRequest
             'type_id' => ['required', 'numeric', 'exists:types,id'],
             'author' => ['required', 'string'],
             'date' => ['required', 'date'],
-            'description' => ['string']
+            'description' => ['string'],
+            'technologies' => ['required', 'array', 'exists:technologies,id']
         ];
     }
 

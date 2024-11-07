@@ -23,6 +23,7 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'min:3'],
+            'type_id' => ['required', 'numeric', 'exists:types,id'],
             'author' => ['required', 'string'],
             'date' => ['required', 'date'],
             'description' => ['string']

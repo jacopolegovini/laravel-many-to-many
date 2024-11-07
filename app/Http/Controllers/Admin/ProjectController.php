@@ -38,6 +38,7 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $project = Project::create($data);
+        $project->technologies()->attach($data['technologies']);
         return redirect()->route('admin.projects.index');
     }
 

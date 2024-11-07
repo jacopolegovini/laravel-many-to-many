@@ -107,7 +107,7 @@
                                                     {{ $project->description }}
                                                 </td>
                                                 <td>
-                                                    <a href="/admin/projects/{{ $index + 1 }}" class="btn btn-sm btn-primary me-2">Show</a>
+                                                    <a href="{{route('admin.projects.show', $project->id)}}" class="btn btn-sm btn-primary me-2">Show</a>
 
                                                     @if (Auth::check())
 
