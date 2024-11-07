@@ -1,0 +1,18 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+// Layout
+.project-navigation {
+    flex-basis: 10vw;
+}
+
+.main-content {
+    flex-basis: 90vw;
+}
