@@ -7,6 +7,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\Technology;
 use App\Models\Type;
 
 class ProjectController extends Controller
@@ -46,8 +47,9 @@ class ProjectController extends Controller
     {
         $projects = Project::findOrFail($id);
         $types = Type::all();
+        $technologies = Technology::all();
 
-        return view('admin.projects.show', compact('projects', 'types'));
+        return view('admin.projects.show', compact('projects', 'types', 'technologies'));
     }
 
     /**

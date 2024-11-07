@@ -9,8 +9,10 @@
             <h6 class="card-subtitle mb-2 text-body-secondary">{{$projects->date}}</h6>
             <p class="card-text">{{$projects->description}}</p>
             <ul>
-                @foreach ( as )
-
+                @foreach ($projects->technologies as $technology)
+                <li>
+                    {{$technology->name}}
+                </li>
                 @endforeach
             </ul>
             <a href="{{route('welcome.index')}}" class="card-link">Go Back</a>
