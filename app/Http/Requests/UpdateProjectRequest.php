@@ -27,7 +27,7 @@ class UpdateProjectRequest extends FormRequest
             'author' => ['required', 'string'],
             'date' => ['required', 'date'],
             'description' => ['string'],
-            'technologies' => ['required', 'array']
+            'technologies' => ['required', 'array', 'exists:technologies,id']
         ];
     }
 }

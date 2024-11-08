@@ -47,7 +47,8 @@
             <div class="mb-3">
                 <label for="project-technology" class="form-label">Technology:</label><br>
                 @foreach ($technologies as $technology)
-                    <input type="checkbox" class="" id="project-technology-{{$projects->technologies->name}}" name="technologies[]" value="{{$technology->id}}">
+                @dump($technology->id)
+                    <input type="checkbox" class="" id="project-technology-{{$technology->name}}" name="technologies[]" value="{{$technology->id}}">
                     <label for="project-technology" class="btn-group">{{$technology->name}}</label><br>
                 @endforeach
             </div>
