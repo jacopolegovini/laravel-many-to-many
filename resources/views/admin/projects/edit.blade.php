@@ -44,14 +44,13 @@
                 <input type="text" class="form-control" id="project-description" name="description" value="{{$projects->description}}">
             </div>
             {{-- ! Da aggiustare --}}
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label for="project-technology" class="form-label">Technology:</label><br>
                 @foreach ($technologies as $technology)
-                @dump($technology->id)
                     <input type="checkbox" class="" id="project-technology-{{$technology->name}}" name="technologies[]" value="{{$technology->id}}">
                     <label for="project-technology" class="btn-group">{{$technology->name}}</label><br>
                 @endforeach
-            </div>
+            </div> --}}
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
                 <button type="submit" class="btn btn-primary me-3">

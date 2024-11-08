@@ -73,6 +73,7 @@ class ProjectController extends Controller
     {
         $projects = Project::findOrFail($id);
         $projects->update($request->validated());
+        // $projects->technologies()->attach($id);
 
         return redirect()->route('admin.projects.index');
     }
