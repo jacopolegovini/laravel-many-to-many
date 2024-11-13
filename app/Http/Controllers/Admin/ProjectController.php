@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Technology;
 use App\Models\Type;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -37,6 +38,10 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $data = $request->validated();
+
+        $filePath = Storage::disk('public')->put('img/projects/', $request->img);
+        $data['img'] = $filePath;
+
         $project = Project::create($data);
         $project->technologies()->attach($data['technologies']);
         return redirect()->route('admin.projects.index');

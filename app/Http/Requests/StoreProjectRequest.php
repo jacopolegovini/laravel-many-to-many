@@ -27,7 +27,8 @@ class StoreProjectRequest extends FormRequest
             'author' => ['required', 'string'],
             'date' => ['required', 'date'],
             'description' => ['string'],
-            'technologies' => ['required', 'array', 'exists:technologies,id']
+            'technologies' => ['required', 'array', 'exists:technologies,id'],
+            'img' => ['image', 'nullable', 'max:250']
         ];
     }
 
