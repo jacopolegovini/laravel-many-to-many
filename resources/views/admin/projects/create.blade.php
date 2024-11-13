@@ -11,7 +11,7 @@
         </ul>
     </div>
     @endif
-    <form action="{{route('admin.projects.store')}}" method="POST">
+    <form action="{{route('admin.projects.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
 
             <h1 class="mb-3">
@@ -49,6 +49,9 @@
                     <input type="checkbox" class="" id="project-technology-{{$technology->name}}" name="technologies[]" value="{{$technology->id}}">
                     <label for="project-technology" class="btn-group">{{$technology->name}}</label><br>
                 @endforeach
+            </div>
+            <div class="mb-3">
+                <input type="file" name="img" id="project-image">
             </div>
 
             <div class="mb-3 d-flex justify-content-center align-items-center">
