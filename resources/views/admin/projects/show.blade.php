@@ -6,6 +6,7 @@
     <div class="card" style="width: 20rem;">
         <div class="card-body">
             <h5 class="card-title">{{$projects->title}} | {{$projects->type->type}}</h5>
+            <img src="{{asset("/storage/ . $projects->img")}}" alt="{{$projects->title}}">
             <h6 class="card-subtitle mb-2 text-body-secondary">{{$projects->date}}</h6>
             <p class="card-text">{{$projects->description}}</p>
             <ul>
